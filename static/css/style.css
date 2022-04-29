@@ -1,0 +1,227 @@
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0} 
+body{font-family: Noto Sans TC;} 
+a{color:#2d374b;text-decoration:none} 
+a:hover{color:#cd0200;text-decoration:underline} 
+em{font-style:normal} 
+li{list-style:none} 
+img{border:0;vertical-align:middle} 
+table{border-collapse:collapse;border-spacing:0} 
+p{word-wrap:break-word}
+
+body,html{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+}
+.mask{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background: #000000;
+    opacity: 0.25;
+    display: none;
+    z-index: 250;
+}
+.loger{
+    position: fixed; /* positioning in center of page */
+    top: 220px;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+    width: 340px;
+    background-color: white;
+    display: none;
+    flex-direction: column;
+    z-index: 500;
+    border-radius: 6px;
+}
+.loger_cap{
+    height: 10px;
+    background: linear-gradient(270deg, #337788 0%, #66AABB 100%);
+    border-radius: 6px 6px 0px 0px;
+}
+.loger_main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login_main_i{
+    margin: 15px;
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    color: #666666;
+}
+.X{
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    right: 20px;
+    top: 30px;
+    background-color: #000000;
+    cursor: pointer;
+
+}
+.login_main_t{
+    margin-bottom: 10px;
+    width: 310px;
+    height: 47px;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #666666;
+    padding-left: 15px;
+}
+.login_main_b{
+    width: 310px;
+    height: 47px;
+    background: #448899;
+    border-radius: 5px;
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+}
+.login_main_q{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #666666;
+    cursor: pointer;
+    
+}
+.top{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.title{
+    font-size: 25px;
+}
+.top_1{
+    display: flex;
+    margin-left: 20px;
+}
+.top_2{
+    margin-right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+}
+.top_2_in{
+    margin-right: 25px;
+}
+
+
+.chatter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: scroll;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  background-color: #cecece;
+}
+.chatter .chatter_bar{
+  position: absolute;
+  top: 55px;
+  left: 0px;
+  font-size: 36px;
+  margin-right: 50px;
+  background-color: #000000;
+  width: 100%;
+}
+
+.chatter_inner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+}
+.myMessage{
+    text-align: start;
+    padding: 10px;
+    width: 45%;
+    max-height: 100%;
+}
+.userMessage{
+    text-align: end;
+    padding: 10px;
+    width: 45%;
+    align-self: flex-end;
+}
+.systemMessage{
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+.box{
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+
+}
+.sayer{
+    font-size: 25px;
+    margin: 5px;
+}
+.say_what{
+    font-size: 20px;
+    margin: 5px;
+    max-height: 100%;
+}
+
+.controls{
+    background:linear-gradient(to right,#b8a68a,#ac8c54,#4c2c14,#533f24,#0a0108);
+    width: 100%;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:solid black 1px;
+}
+.input_bar{
+    height: 55px;
+    width: 90%;
+    border: none;
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;    
+    color: #666666;
+    padding-left: 10px;
+    border-radius: 5px 0px 0px 5px;
+}
+/* .input_bar:{
+    border: none;
+} */
+.sender{
+    height: 55px;
+    width: 50px;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+}

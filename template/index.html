@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+
+    <title>Bored Board</title>
+</head>
+<body>
+    <div class="mask" id="mask"></div>
+    <div class="loger" id="loger">
+        <div class="loger_cap"></div>
+        <div class="loger_main">
+            <p class="login_main_i">Board</p>
+            <div class="X" onclick="logout()"></div>
+            <input class="login_main_t" id="userName" type="text" placeholder="打掉重做">
+            <input class="login_main_t" id="room" type="text" placeholder="密碼">
+            <input class="login_main_b" id="meet" type="button" onclick="login()" value="Random">
+            <div >
+                <p class="login_main_q" id="signup_sw" onclick="tester()">忘記密碼</p>
+                <p class="login_main_q" id="signup_sw" onclick="tester()">還沒有帳號?</p>
+            </div>
+        </div>
+    </div>
+    <nav class="top">
+        <div class="top_1">
+            <div class="title">Board</div>
+            <div onclick="tester()">2</div>
+        </div>
+        <div class="top_2">
+        <div class="top_2_in" onclick="openChat()">OpenChat</div>
+        <div class="top_2_in" onclick="leave()">Leave</div>
+        </div>
+    </nav>
+
+    <canvas id="canvas"></canvas>
+
+
+
+    <section class="chatter" id="chatter">
+        <div class="chatter_bar" onclick="closeChat()">
+            <button onclick="closeChat()">X</button>
+        </div>
+        <div class="chatter_inner" id="chatter_inner">
+            <!-- 訊息放置處 -->
+        </div>
+        <div class="controls">
+            <input class="input_bar" id="input_bar" type="text" placeholder="文字輸入">
+            <button class="sender" id="sender" onclick="send()">send</button>
+        </div>
+    </section>
+    <!-- <section class="controls"></section> -->
+
+
+
+    
+    <!-- <ul class="list-unstyled components">
+        <li>
+            <label for="color-picker">Brush Colour:</label>
+            <select class="form-control" id="color-picker">
+                <option value="black" style="background-color: Black;color: #FFFFFF;">Black</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="white">White</option>
+            </select>
+
+        </li>
+        <li>
+            <label for="thickness_slider">Brush Thickness</label>
+            <input id="thickness_slider" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+        </li>
+        <li>
+            <button type="button" id="erase" class="btn btn-default" style="margin-top:5px;width:100%;">Clear Canvas</button>
+        </li>
+    </ul> -->
+
+
+
+<script type="text/javascript" src="../js/index.js" charset="utf-8"></script>
+<script type="text/javascript" src="../js/draw.js" charset="utf-8"></script>
+
+<!-- <script type="text/javascript" src="../js/room.js" charset="utf-8"></script> -->
+
+</body>
+</html>
