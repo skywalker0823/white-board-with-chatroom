@@ -120,7 +120,6 @@ init = async () => {
     // {"say":data["message"],"username":username,"echo":data['echo']}
     if (data) {
       who = data.username;
-      console.log("me:", me, "who:", who);
       let message = document.createElement("div");
       let box = document.createElement("div");
       let sayer = document.createElement("div");
@@ -211,7 +210,6 @@ async function tester() {
   };
   const response = await fetch("/test", options);
   const result = await response.json();
-  console.log(result);
 }
 //登出
 async function logout() {
@@ -225,7 +223,6 @@ async function logout() {
   };
   const response = await fetch("/room", options);
   const result = await response.json();
-  console.log(result);
 }
 //登入
 login = () => {

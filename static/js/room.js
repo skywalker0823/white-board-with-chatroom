@@ -1,10 +1,8 @@
   if(type!="random"){
     //房間制才檢查名稱
     nameChecker(userName);
-    console.log("進房拉",type)
     room=type
     let me = userName;
-    console.log("fetching!")
 
 
     //是否這裡先打GET確認登入狀況？
@@ -19,14 +17,11 @@
     };
     const response = await fetch("/room",options);
     const result = await response.json();
-    console.log(result)
-    //同名檢查
+
     if(result.error){
-      console.log(result);
       return null
     }
     socket = io.connect();
-    //開始進房
     socket.emit("join", { username: userName, room: room });
 
 
@@ -39,7 +34,6 @@
         chatter.style.filter = "none";
         window.removeEventListener("scroll", locker);
       }else if(data.leave){
-        console.log("leave!")
         loger.style.display = "block";
         mask.style.display = "block";
         chatter.style.filter = "block";
@@ -51,9 +45,7 @@
 
 
     socket.on("message",(data)=>{
-      console.log(data)
       who = data.name;
-      console.log("me:", me, "who:", who);
       let message = document.createElement("div");
       let box = document.createElement("div");
       let sayer = document.createElement("div");
@@ -70,7 +62,6 @@
         message.setAttribute("class", "myMessage");
         updateScroll();
       } else {
-        console.log("這是別人的訊息");
         message.setAttribute("class", "userMessage");
         updateScroll();
       }
@@ -81,7 +72,6 @@
     send = () => {
       words = document.getElementById("input_bar");
       if (words.value) {
-        console.log(me);
         summary = { message: words.value, username: me };
         socket.emit("text", summary);
         words.value = "";
@@ -94,7 +84,6 @@
 
 
   leave = () => {
-    console.log("離開！")
     socket.emit("left",{username:me});
     socket.disconnect();
   };
