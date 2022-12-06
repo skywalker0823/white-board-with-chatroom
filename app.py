@@ -7,11 +7,11 @@ from flask_socketio import join_room, leave_room
 from flask_session import Session
 from os import urandom
 from random import randint,random,choice
-import cv2
+# import cv2
 import os
 import string
 
-from itsdangerous import json
+# from itsdangerous import json
 
 
 
